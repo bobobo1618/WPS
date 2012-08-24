@@ -1,0 +1,34 @@
+extends default
+html
+  head
+    block title
+      title New Subscription
+  body
+    block nav
+      li
+        a(href="/") Home
+      li
+        .active
+          a(href="/subscribe") New Subscription
+    block links
+      ul
+        li
+          a(href="/") Home
+        li
+          a(href="/subscribe") New Subscription
+    block body
+      form(action="/subscribe", method="post", enctype="multipart/form-data")
+        fieldset
+          legend New Subscription
+          .clearfix
+            label(for="text") Mode
+            .input
+              input(type="text", name="hub.mode")
+          .clearfix
+            label(for="text") Feed
+            .input
+              input(type="text", name="hub.topic")
+          div.actions.clearfix
+            input.btn.primary(type="submit")
+    block rightbar
+      p Nothing to see here...

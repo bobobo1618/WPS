@@ -1,0 +1,33 @@
+!!! 5
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    block title
+    link(rel="stylesheet", href="/static/bootstrap.min.css")
+    script(type="text/javascript",src="/static/jquery-1.7.1.min.js")
+    block extrascripts
+    style(type="text/css")
+      body {padding-top: 60px; max-width: 100%;}
+      img {max-width: 100%;}
+      .container-fluid {padding-left:0; padding-right:0;}
+      .container-fluid > .sidebar {float:right; width:15%;min-width:0; position:relative; left:0px; margin-left: 1%; margin-right: 1%;}
+      .container-fluid > .content {margin-left:17%; width:66%; float:left;}
+      .container-fluid > #sidebar-left {position:absolute;}
+  body
+    .topbar(data-dropdown="dropdown")
+      .topbar-inner
+        .container
+          h3 
+            a(href="/") Derp
+          ul.nav-list.pkg
+            block nav
+    .container-fluid
+      #sidebar-left.sidebar
+        .well
+          h3 Links
+          block links
+      .content
+        block body
+      #sidebar-right.sidebar
+        .well
+          block rightbar
